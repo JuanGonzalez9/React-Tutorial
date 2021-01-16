@@ -6,7 +6,15 @@ import ReactDom from 'react-dom'
  *  with a capital letter to be a component 
 ***/
 function Greeting(){
-  return <h4>This is my first component</h4>;
+  return( 
+    <div>
+      <Person />
+      <Message />
+    </div>
+  );
 }
+
+const Person = () => <h2>Juan Gonzalez</h2>;
+const Message = () => <h4>This is my message</h4>
 
 ReactDom.render(<Greeting/>,document.getElementById('root'));
